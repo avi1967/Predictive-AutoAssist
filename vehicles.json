@@ -1,0 +1,18 @@
+[
+  {
+    "vin": "VIN-1234",
+    "status": "Active",
+    "age": 5,
+    "mileage": 90000,
+    "engine_temp": 95,
+    "error_count": 4
+  },
+  {
+    "vin": "VIN-2234",
+    "status": "Active",
+    "age": 2,
+    "mileage": 120000,
+    "engine_temp": 105,
+    "error_count": 6
+  }
+]

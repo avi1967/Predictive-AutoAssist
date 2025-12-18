@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictive Maintenance Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    Predictive Maintenance System
+</header>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h3>Navigation</h3>
+        <a href="/">Dashboard</a>
+        <a href="#">Vehicle Health</a>
+        <a href="#">Predictions</a>
+        <a href="#">Service Scheduling</a>
+        <a href="#">Reports</a>
+    </div>
+
+    <div class="main">
+
+        <div class="alert-box">
+            ⚠️ High-risk vehicles detected. Immediate action recommended.
+        </div>
+
+        <div class="card">
+            <h3>Active Vehicles</h3>
+
+            <table>
+                <tr>
+                    <th>VIN</th>
+                    <th>Status</th>
+                    <th>Risk</th>
+                    <th>Alert</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for v in vehicles %}
+                <tr>
+                    <td>{{ v.vin }}</td>
+                    <td>{{ v.status }}</td>
+                    <td class="{{ 'high' if v.risk == 'High' else 'low' }}">{{ v.risk }}</td>
+                    <td>{{ v.alert }}</td>
+                    <td>
+                        {% if v.risk == 'High' %}
+                            <a href="/chat/{{ v.vin }}">Notify Customer</a>
+                        {% else %}
+                            Monitoring
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
