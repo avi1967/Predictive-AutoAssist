@@ -1,7 +1,7 @@
-# 🚗 Predictive-AutoAssist
+# 🚗 AutoCare AI
 ### AI-Driven Predictive Maintenance & Service Scheduling Platform
 
-Predictive AutoAssist is a full-stack predictive maintenance prototype for the automotive domain.  
+AutoCare AI is a full-stack predictive maintenance prototype for the automotive domain.  
 It integrates a supervised machine learning model to predict vehicle failure risk and
 automates customer engagement and service scheduling through a web-based interface.
 
@@ -35,25 +35,6 @@ automates customer engagement and service scheduling through a web-based interfa
 - **Backend:** Python, Flask  
 - **Machine Learning:** scikit-learn, pandas  
 - **Data:** CSV (training), JSON (runtime)
-
----
-
-## 📂 Project Structure
-
-predictive-maintenance-prototype/
-├── app.py
-├── ml_model.py
-├── model.pkl
-├── vehicle_data.csv
-├── vehicles.json
-├── requirements.txt
-├── templates/
-│ ├── dashboard.html
-│ ├── chat.html
-│ ├── schedule.html
-│ └── confirmation.html
-└── static/
-└── style.css
 
 
 ---
